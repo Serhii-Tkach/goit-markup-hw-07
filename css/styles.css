@@ -187,6 +187,7 @@ img {
 
     .mob-menu {
         position: fixed;
+        z-index: 1;
         top: 0;
         width: 100vw;
         height: 100vh;
@@ -668,7 +669,7 @@ img {
     transform: translate(-50%, -50%);
 
     width: calc(100% - 32px);
-    height: 584px;
+    max-height: 584px;
 
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -865,29 +866,27 @@ img {
     justify-content: space-around;
 }
 
+@media screen and (max-height: 666px) {
+    .modal {
+        height: 90vh;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .modal-form {
+            padding: 72px 16px 24px 16px;
+        }
+}
+
 @media screen and (min-width: 320px) and (max-width: 407px) {
     .comment-field {
         height: 80px;
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-    .modal {
-        height: 90vh;
-        overflow: scroll;
-    }
-
-    .modal-form {
-        padding: 72px 18px 24px 18px;
-    }
-}
-
 @media screen and (min-width: 428px) and (max-width: 767px) {
     .modal {
-        width: 392px;
-    }
-
-    .modal-form {
         width: 392px;
     }
 }
@@ -896,18 +895,14 @@ img {
     .modal {
         width: 408px;
     }
-
-    .modal-form {
-        width: 408px;
-    }
 }
 
-@media screen and (max-width: 1199px) {
+/* @media screen and (max-width: 1199px) {
     .modal {
         height: 90vh;
         overflow: scroll;
     }
-}
+} */
 
 /* Secret name */
 .secret-name {
@@ -1667,6 +1662,12 @@ img {
     font-weight: 400;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .cards-list {
+        max-width: 396px;
+    }
+}
+
 @media screen and (min-width: 768px) {  
     .cards-list {
         display: flex;
@@ -1676,7 +1677,6 @@ img {
     .cards-list>.item {
         margin-right: 24px;
         margin-bottom: 72px;
-        width: calc((100% - 24px) / 2);
     }
 }
 
